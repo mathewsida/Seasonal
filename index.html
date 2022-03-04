@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <title>Seasonal Styles</title>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="stylesheet" href="css/default.css" />
+  <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <style type="text/css">
+  
+    .masthead{
+        font-family: 'Damion', cursive; /* required for google font */
+        font-size:3em;
+    }
+
+    #logo{
+        float:right;
+        display:inline-block;
+        padding:2px;
+        max-width:100px; /* actual size of image */
+        width:20%; /* approximate size taken on screen in maximum view */
+    }
+  
+    #wear {
+        float:left;
+        display:inline-block;
+        padding:20px;
+        max-width:300px; /* actual size of image */
+        width:33%; /* approximate size taken on screen in maximum view */
+    }
+
+    ul.colors{
+	display:inline-block;
+	margin-left:5%;
+}
+
+    li.seasons a {
+        /* color:red; */
+    }
+
+    header > h3{
+        /* background-color:yellow; */
+    }
+
+    ul.area{
+    margin-left:5%;
+    }
+
+  </style>
+ </head>
+ <body>
+	<header role="banner">
+	    <img src="images/four-seasons.gif" alt="Seasonal Logo Goes Here" class="flexible" id="logo" />
+		<h1 class="masthead">Eddie Browser</h1>
+		<nav>
+			<ul>
+				<li class="default"><a href="Default">Default</a></li>
+				<li class="spring"><a href="Spring">Spring</a></li>
+				<li class="summer"><a href="Summer">Summer</a></li>
+				<li class="fall"><a href="Fall">Fall</a></li>
+				<li class="winter"><a href="Winter">Winter</a></li>
+			</ul>
+		</nav>
+	</header>
+     
+   <main class="wrapper">
+    <header><h3>Outfitter for All Seasons!</h3></header>
+    <p>
+        Using jQuery, create a page that promotes a unique look and feel for each of the four seasons by changing a page in the 4 following areas:
+        <ul class="area">
+            <li>A unique color scheme, for example stylesheet or background color, etc.</li>
+            <li>A unique logo, for example a picture of a snowflake for winter, etc.</li>
+            <li>A unique item of clothing, for example a parka for winter.</li>
+            <li>A unique string of text identifying the season, for example "Leap into our Fall Wear!"</li>
+        </ul>
+    <img src="images/300x400.png" alt="Season Wear Goes Here" id="wear" />
+    </p>
+    <footer>
+    <p><small>&copy; 2020-<span id="copyright"></span>
+         Mathew Sida, All Rights Reserved ~ 
+        <a id="html-checker" href="#">Check HTML</a> ~ 
+        <a id="css-checker" href="#">Check CSS</a></small>
+    </p>
+
+    <script>
+        let myDate = new Date();
+        let myYear = myDate.getFullYear();
+        document.getElementById("copyright").innerHTML = myYear;
+        console.log(myYear);
+    </script>
+
+    </footer>
+  </main>
+  <script src="js/main.js"></script>
+  <script src="js/seasonal-styles.js"></script>
+
+  </body>
+</html>
